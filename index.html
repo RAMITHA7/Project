@@ -6,6 +6,7 @@
  
     <!-- SEO Meta Tags -->
     <title>Ramitha Hatwar| Web Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
     <meta name="description" content="Full-stack web developer specializing
           in React and Node.js. Available for freelance projects.">
     <meta name="keywords" content="web developer, React, JavaScript, portfolio">
@@ -24,70 +25,129 @@
     <meta name="twitter:description" content="Check out my portfolio!">
 </head>
 <body>
-    <nav>
-        <a href="About">About</a> 
-        <a href="Skills">Skills</a> 
-        <a href="">Projects</a> 
-        <a href="">Contact</a>
-    </nav>
-    <header>
-        <h1>Hi, I'm Ramitha Hatwar 👋🏻 </h1>
-        <p>I am a passionate web developer from Bengaluru.</p>
-        <a href="">Hire Me</a>
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="logo">RH</div>
+            <ul>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" title="Toggle Dark Mode" aria-label="Toggle Dark Mode">🌙</button>
+            <button class="menu-toggle" title="Toggle Navigation" aria-label="Toggle Navigation" aria-expanded="false">☰</button>
+
+        </nav>
     </header>
-    <section id="About">
+    <main>
+        <section class="hero-section" id="hero">
+            <h1>Hi, I'm Ramitha Hatwar 👋🏻 </h1>
+            <p class="tagline">I am a passionate web developer from Bengaluru.</p>
+            <div class="hero-button">
+                <a href="#Projects">View Projects</a>
+                <a href="#Contact">ContactMe</a>
+            </div>
+        </section>
+        <section id="About" class="about-section">
         <h2>About Me</h2>
-        <img src="profile.jpg" alt="Profile Picture" width="200px" height="200px">
-        <p>I enjoy creating responsive and user-friendly websites. I am a web developer currently learning in HTML, CSS, JavaScript and React.</p>
-    </section>
-    <section id="Skills">
-        <h2> My Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Python</li>
-            <li>JavaScript</li>
-            <li>React</li>
-        </ul>
-    </section>
-    <section id="Projects">
-        <h2>My Projects</h2>
-        <div class="Project-card">
-            <h3>Project 1</h3>
-            <p>Description of Project 1</p>
-            <a href="#">View Project</a>
+        <div class="about-content">
+            <figure class="profile-figure">
+                <img src="profile.jpg" alt="Profile Picture" width="200px" height="200px">
+                <figcaption>Ramitha Hatwar - Web Developer</figcaption>
+            </figure>
+            <div class="about-text">
+              <p>
+                I enjoy creating responsive and user-friendly websites. Currently learning in HTML, CSS, 
+                JavaScript and React.
+              </p>  
+            </div>    
         </div>
-        <div class="Project-card">
-            <h3>Project 2</h3>
-            <p>Description of Project 2</p>
-            <a href="#">View Project</a>
+        </section>
+        <section id="Skills" class="skills-section">
+           <h2> My Skills</h2>
+           <div class="skills-grid">
+               <div class="skill-item" data-level="90">HTML</div>
+               <div class="skill-item" data-level="85">CSS</div>
+               <div class="skill-item" data-level="80">Python</div>
+               <div class="skill-item" data-level="90">C++</div>
+               <div class="skill-item" data-level="75">JavaScript</div>
+               <div class="skill-item" data-level="60">React</div>
+        </div>
+       </section>
+       <section id="Projects" class="projects-section">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <article class="project-card " data-category="web">
+                <img src="weather.jpg" alt="Weather Project" width="300px" height="200px">
+                <h3>Weather App</h3>
+                <p>A web application that provides real-time weather information for any location using openWeather API.</p>
+                <div class="project-tag">
+                    <span class="tag">React</span>
+                    <span class="tag">API</span>
+                </div>
+                <a href="#" class="btn">Live Demo</a>
+                <a href="#" class="btn">Github</a>
+            </article>
+        </section>
         </div> 
-    </section>
-    <section id="Contact">
-        <h2>Contact Me</h2>
+        <section id="Contact" class="contact-section">
+        <h2>Get in Touch</h2>
         <p>Have a project in mind:</p>
         <form action="">
-            <label for="name">Your Name:</label required>
-            <input type="text" id="name" name="name" placeholder="Enter" required><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
-            <label for="subject">Subject:</label>
-            <select id="subject" name="subject" required>
+            <div class="form-group">
+                <label for="name">Your Name:</label required>
+                <input 
+                   type="text" 
+                   id="name" 
+                   name="name" 
+                   placeholder="Enter" 
+                   required><br><br>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input 
+                   type="email" 
+                   id="email" 
+                   name="email" 
+                   placeholder="Enter your email" 
+                   required><br><br>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <select 
+                   id="subject" 
+                   name="subject" 
+                   required></select>
                 <option value="">Select a topic</option>
                 <option value="hire">I want to hire you</option>
                 <option value="collab">I want to colllaborate </option>
                 <option value="others">Others</option>
             </select><br><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" placeholder="Tell me about your project" rows="7" cols="50" required></textarea><br><br>
+            </div>
+            <div class="form-group">
+            <label 
+                for="message">Message:
+            </label><br>
+            <textarea 
+                id="message" 
+                name="message" 
+                placeholder="Tell me about your project" 
+                rows="7" 
+                cols="50" 
+                required></textarea><br><br>
+            </div>
             <button type="submit">Send message</button>
-        </form>
-  </section>
-        <p>Email: <a href="mailto:ramithahatwar@gmail.com">ramithahatwar@gmail.com</a></p>
-        <section>
-            <footer>
-                <p>&copy; 2026 Ramitha Hatwar. All rights reserved.</p>
-            </footer>
+          </form>
         </section>
+    </main>
+            <footer class="site-footer">
+                <p>&copy; 2026 Ramitha Hatwar. All rights reserved.</p>
+                <nav aria-label="Social Links">
+                    <a href="github" target="_blank">GitHub</a> |
+                    <a href="linkedin" target="_blank">LinkedIn</a> |
+                    <a href="twitter" target="_blank">Twitter</a> |
+                    <a href="gmail" target="_blank">Gmail</a>
+                </nav>
+            </footer>
 </body>
 </html>
